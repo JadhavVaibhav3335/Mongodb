@@ -1,0 +1,625 @@
+--------------------------------------------------------------------------------------------------------------------------
+Name :Rhutik Jagtap
+Class : Msc in Computer Science
+Roll no. : 15452
+Subject : Database Technology (MongoDB Practical) Assignment 1
+College :Abasaheb Garware College, Pune
+year : 2023 - 24
+
+----------------------------------------------------------------------------------------------------------------------------
+Assignment 1
+----------------------------------------------------------------------------------------------------------------------------
+(1) create database “movie”
+
+> use movie
+switched to db movie
+>
+----------------------------------------------------------------------------------------------------------------------------
+(2) create collection named “film”
+
+> db.createCollection("film")
+{
+"ok" : 0,
+"errmsg" : "db already exists with different case already have: [Movie] trying to create [movie]",
+"code" : 13297,
+"codeName" : "DatabaseDifferCase"
+}
+>
+----------------------------------------------------------------------------------------------------------------------------
+(3) create collection named “actor”
+
+> db.createCollection("actor")
+{ "ok" : 1 }
+>
+
+----------------------------------------------------------------------------------------------------------------------------
+Queries
+----------------------------------------------------------------------------------------------------------------------------
+(1) Insert at least 10 documents in the collection Film
+
+> db.Film1.insert([
+ {
+  "film id":101,
+ title:"saaho",
+ "year of release":2019,
+ genre:["action","adventure"],
+ actors:[
+ {fname:"prabhas",lname:"india"},
+ {fname:"jacqueline",lname:"fernandes"}
+ ],
+ directors:[
+ {fname:"karan",lname:"johar"},
+ {fname:"steve",lname:"smith"}
+ ],
+ "release details":[
+ {"places of release":["mumbai","pune","nashik"]},
+ {"dates":["1/1/2019","2/2/2020"]},
+ {"rating of film":4}
+ ]
+ }])
+
+ {
+ "film id":102,
+ title:"saaho",
+ "year of release":2019,
+ genre:["action","adventure"],
+ actors:[
+ {fname:"prabhas",lname:"india"},
+ {fname:"jacqueline",lname:"fernandes"}
+ ],
+ directors:[
+ {fname:"karan",lname:"johar"},
+ {fname:"steve",lname:"smith"}
+ ],
+ "release details":[
+ {"places of release":["mumbai","pune","nashik"]},
+ {"dates":["1/1/2019","2/2/2020"]},
+ {"rating of film":4}
+ ]
+ },
+ {
+ "film id":103,
+ title:"saaho",
+ "year of release":2019,
+ genre:["action","adventure"],
+ actors:[
+ {fname:"prabhas",lname:"india"},
+ {fname:"jacqueline",lname:"fernandes"}
+ ],
+ directors:[
+ {fname:"karan",lname:"johar"},
+ {fname:"steve",lname:"smith"}
+ ],
+ "release details":[
+ {"places of release":["mumbai","pune","nashik"]},
+ {"dates":["1/1/2019","2/2/2020"]},
+ {"rating of film":4}
+ ]
+ },
+ {
+ "film id":104,
+ title:"saaho",
+ "year of release":2019,
+ genre:["action","adventure"],
+ actors:[
+ {fname:"prabhas",lname:"india"},
+ {fname:"jacqueline",lname:"fernandes"}
+ ],
+ directors:[
+ {fname:"karan",lname:"johar"},
+ {fname:"steve",lname:"smith"}
+ ],
+ "release details":[
+ {"places of release":["mumbai","pune","nashik"]},
+ {"dates":["1/1/2019","2/2/2020"]},
+ {"rating of film":4}
+ ]
+ },
+ {
+ "film id":105,
+ title:"saaho",
+ "year of release":2019,
+ genre:["action","adventure"],
+ actors:[
+ {fname:"prabhas",lname:"india"},
+ {fname:"jacqueline",lname:"fernandes"}
+ ],
+ directors:[
+ {fname:"karan",lname:"johar"},
+ {fname:"steve",lname:"smith"}
+ ],
+ "release details":[
+ {"places of release":["mumbai","pune","nashik"]},
+ {"dates":["1/1/2019","2/2/2020"]},
+ {"rating of film":4}
+ ]
+ },
+ {
+ "film id":106,
+ title:"saaho",
+ "year of release":2019,
+ genre:["action","adventure"],
+ actors:[
+ {fname:"prabhas",lname:"india"},
+ {fname:"jacqueline",lname:"fernandes"}
+ ],
+ directors:[
+ {fname:"karan",lname:"johar"},
+ {fname:"steve",lname:"smith"}
+ ],
+ "release details":[
+ {"places of release":["mumbai","pune","nashik"]},
+ {"dates":["1/1/2019","2/2/2020"]},
+ {"rating of film":4}
+ ]
+ },
+ {
+ "film id":107,
+ title:"saaho",
+ "year of release":2019,
+ genre:["action","adventure"],
+ actors:[
+ {fname:"prabhas",lname:"india"},
+ {fname:"jacqueline",lname:"fernandes"}
+ ],
+ directors:[
+ {fname:"karan",lname:"johar"},
+ {fname:"steve",lname:"smith"}
+ ],
+ "release details":[
+ {"places of release":["mumbai","pune","nashik"]},
+ {"dates":["1/1/2019","2/2/2020"]},
+ {"rating of film":4}
+ ]
+ },
+ {
+ "film id":108,
+ title:"saaho",
+ "year of release":2019,
+ genre:["action","adventure"],
+ actors:[
+ {fname:"prabhas",lname:"india"},
+ {fname:"jacqueline",lname:"fernandes"}
+ ],
+ directors:[
+ {fname:"karan",lname:"johar"},
+ {fname:"steve",lname:"smith"}
+ ],
+ "release details":[
+ {"places of release":["mumbai","pune","nashik"]},
+ {"dates":["1/1/2019","2/2/2020"]},
+ {"rating of film":4}
+ ]
+ },
+ {
+ "film id":109,
+ title:"saaho",
+ "year of release":2019,
+ genre:["action","adventure"],
+ actors:[
+ {fname:"prabhas",lname:"india"},
+ {fname:"jacqueline",lname:"fernandes"}
+ ],
+ directors:[
+ {fname:"karan",lname:"johar"},
+ {fname:"steve",lname:"smith"}
+ ],
+ "release details":[
+ {"places of release":["mumbai","pune","nashik"]},
+ {"dates":["1/1/2019","2/2/2020"]},
+ {"rating of film":4}
+ ]
+ },
+ {
+ "film id":110,
+ title:"saaho",
+ "year of release":2019,
+ genre:["action","adventure"],
+ actors:[
+ {fname:"prabhas",lname:"india"},
+ {fname:"jacqueline",lname:"fernandes"}
+ ],
+ directors:[
+ {fname:"karan",lname:"johar"},
+ {fname:"steve",lname:"smith"}
+ ],
+ "release details":[
+ {"places of release":["mumbai","pune","nashik"]},
+ {"dates":["1/1/2019","2/2/2020"]},
+ {"rating of film":4}
+ ]
+ }
+
+ ])
+BulkWriteResult({
+"writeErrors" : [ ],
+"writeConcernErrors" : [ ],
+"nInserted" : 10,
+"nUpserted" : 0,
+"nMatched" : 0,
+"nModified" : 0,
+"nRemoved" : 0,
+"upserted" : [ ]
+})
+
+----------------------------------------------------------------------------------------------------------------------------
+
+(2) Insert at least 10 documents in the collection Actor.
+
+> db.Actor1.insert([
+ {
+ "actor id":1,
+ fname:"aamir",lname:"khan",
+ address:[
+ {street:"wall street"},
+ {city:"new york"},
+ {state:"mid state"},
+ {country:"usa"},
+ {pincode:"62201"}
+ ],
+ "contact details":[
+ {emailid:"sallu@gmail.com"},
+ {phonene:"12345678"}
+ ]
+ },
+ {
+ "actor id":2,
+ fname:"aamir",lname:"khan",
+ address:[
+ {street:"wall street"},
+ {city:"new york"},
+ {state:"mid state"},
+ {country:"usa"},
+ {pincode:"62201"}
+ ],
+ "contact details":[
+ {emailid:"sallu@gmail.com"},
+ {phonene:"12345678"}
+ ]
+ },
+ {
+ "actor id":3,
+ fname:"aamir",lname:"khan",
+ address:[
+ {street:"wall street"},
+ {city:"new york"},
+ {state:"mid state"},
+ {country:"usa"},
+ {pincode:"62201"}
+ ],
+ "contact details":[
+ {emailid:"sallu@gmail.com"},
+ {phonene:"12345678"}
+ ]
+ },
+ {
+ "actor id":4,
+ fname:"aamir",lname:"khan",
+ address:[
+ {street:"wall street"},
+ {city:"new york"},
+ {state:"mid state"},
+ {country:"usa"},
+ {pincode:"62201"}
+ ],
+ "contact details":[
+ {emailid:"sallu@gmail.com"},
+ {phonene:"12345678"}
+ ]
+ },
+ {
+ "actor id":5,
+ fname:"aamir",lname:"khan",
+ address:[
+ {street:"wall street"},
+ {city:"new york"},
+ {state:"mid state"},
+ {country:"usa"},
+ {pincode:"62201"}
+ ],
+ "contact details":[
+ {emailid:"sallu@gmail.com"},
+ {phonene:"12345678"}
+ ]
+ },
+ {
+ "actor id":6,
+ fname:"aamir",lname:"khan",
+ address:[
+ {street:"wall street"},
+ {city:"new york"},
+ {state:"mid state"},
+ {country:"usa"},
+ {pincode:"62201"}
+ ],
+ "contact details":[
+ {emailid:"sallu@gmail.com"},
+ {phonene:"12345678"}
+ ]
+ },
+ {
+ "actor id":7,
+ fname:"aamir",lname:"khan",
+ address:[
+ {street:"wall street"},
+ {city:"new york"},
+ {state:"mid state"},
+ {country:"usa"},
+ {pincode:"62201"}
+ ],
+ "contact details":[
+ {emailid:"sallu@gmail.com"},
+ {phonene:"12345678"}
+ ]
+ },
+ {
+ "actor id":8,
+ fname:"aamir",lname:"khan",
+ address:[
+ {street:"wall street"},
+ {city:"new york"},
+ {state:"mid state"},
+ {country:"usa"},
+ {pincode:"62201"}
+ ],
+ "contact details":[
+ {emailid:"sallu@gmail.com"},
+ {phonene:"12345678"}
+ ]
+ },
+ {
+ "actor id":9,
+ fname:"aamir",lname:"khan",
+ address:[
+ {street:"wall street"},
+ {city:"new york"},
+ {state:"mid state"},
+ {country:"usa"},
+ {pincode:"62201"}
+ ],
+ "contact details":[
+ {emailid:"sallu@gmail.com"},
+ {phonene:"12345678"}
+ ]
+ },
+ {
+ "actor id":10,
+ fname:"aamir",lname:"khan",
+ address:[
+ {street:"wall street"},
+ {city:"new york"},
+ {state:"mid state"},
+ {country:"usa"},
+ {pincode:"62201"}
+ ],
+ "contact details":[
+ {emailid:"sallu@gmail.com"},
+ {phonene:"12345678"}
+ ]
+ },
+
+ ])
+BulkWriteResult({
+"writeErrors" : [ ],
+"writeConcernErrors" : [ ],
+"nInserted" : 10,
+"nUpserted" : 0,
+"nMatched" : 0,
+"nModified" : 0,
+"nRemoved" : 0,
+"upserted" : [ ]
+})
+>
+----------------------------------------------------------------------------------------------------------------------------
+(3)
+(a) Film
+> db.Film.find().pretty()
+{
+"_id" : ObjectId("5d9866737ba39f6e3fab98de"),
+"film id" : 101,
+"title" : "saaho",
+"year of release" : 2019,
+"genre" : [
+"action",
+"adventure"
+],
+"actors" : [
+{
+"fname" : "prabhas",
+"lname" : "india"
+},
+{
+"fname" : "jacqueline",
+"lname" : "fernandes"
+}
+],
+"directors" : [
+{
+"fname" : "steve",
+"lname" : "smith"
+}
+],
+"release details" : [
+{
+"places of release" : [
+"mumbai",
+"pune",
+"nashik"
+]
+},
+{
+"dates" : [
+"1/1/2019",
+"2/2/2020"
+]
+},
+{
+"rating of film" : 4
+}
+]
+}
+Type "it" for more
+>
+----------------------------------------------------------------------------------------------------------------------------
+(b)
+
+> db.Actor.find().pretty()
+{
+"_id" : ObjectId("5d9871b0e4ad1c7217d64344"),
+"actor id" : 9,
+"fname" : "aamir",
+"lname" : "khan",
+"address" : [
+{
+"street" : "wall street"
+},
+{
+"city" : "new york"
+},
+{
+"state" : "mid state"
+},
+{
+"country" : "usa"
+},
+{
+"pincode" : "62201"
+}
+],
+"contact details" : [
+{
+"emailid" : "sallu@gmail.com"
+},
+{
+"phonene" : "12345678"
+}
+]
+}
+{
+"_id" : ObjectId("5d9871b0e4ad1c7217d64345"),
+"actor id" : 10,
+"fname" : "aamir",
+"lname" : "khan",
+"address" : [
+{
+"street" : "wall street"
+},
+{
+"city" : "new york"
+},
+{
+"state" : "mid state"
+},
+{
+"country" : "usa"
+},
+{
+"pincode" : "62201"
+}
+],
+"contact details" : [
+{
+"emailid" : "sallu@gmail.com"
+},
+{
+"phonene" : "12345678"
+}
+]
+}
+>
+----------------------------------------------------------------------------------------------------------------------------
+(4) Add a value to the rating of the film whose title starts with ‘T’.
+
+> db.Film.update({title:{$regex:/^t.*/}},{$set:{"rating of film":0}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+>
+
+(5) Add an actor named "Shahid Kapoor " in the ‘Actor’ collection. Also add the details of the film in ‘Kismat Konnection’ collection in which this actor has acted in
+
+
+(a) actor
+> db.Actor.insert({
+ "actor id":1,
+ fname:"Shahid",lname:"kappor",
+ address:[
+ {street:"wall street"},
+ {city:"new york"},
+ {state:"mid state"},
+ {country:"usa"},
+ {pincode:"62201"}
+ ],
+ "contact details":[
+ {emailid:"shahidkapoor@gmail.com"},
+ {phonene:"12345678"}
+ ]
+ })
+WriteResult({ "nInserted" : 1 })
+>
+----------------------------------------------------------------------------------------------------------------------------
+(b) film
+
+> db.Film.insert({
+ "film id":101,
+ title:"Kismat Konnection",
+ "year of release":2007,
+ genre:["love","romance"],
+ actors:[
+ {fname:"Shahid",lname:"kapoor"},
+ {fname:"Vidya",lname:"Balan"}
+ ],
+ directors:[
+ {fname:"karan",lname:"johar"},
+ {fname:"steve",lname:"smith"}
+ ],
+ "release details":[
+ {"places of release":["mumbai","pune","nashik"]},
+ {"dates":["1/1/2019","2/2/2020"]},
+ {"rating of film":4}
+ ]
+ })
+WriteResult({ "nInserted" : 1 })
+>
+----------------------------------------------------------------------------------------------------------------------------
+(6) Delete the film " Kismat Konection".
+
+> db.Film.remove({title:"Kismat Konnection"})
+WriteResult({ "nRemoved" : 1 })
+>
+----------------------------------------------------------------------------------------------------------------------------
+(7) Delete an actor named " Shahid Kapoor".
+
+> db.Actor.remove({"fname":"Shahid"})
+WriteResult({ "nRemoved" : 1 })
+>
+----------------------------------------------------------------------------------------------------------------------------
+(8) Delete all actors from an ‘Actor’ collection who have age greater than “ 50”
+
+> db.Actor.remove({age:{$gt:50}})
+WriteResult({ "nRemoved" : 2 })
+>
+----------------------------------------------------------------------------------------------------------------------------
+(9) Update the actor’s address where Actor Id is “101 ”.
+
+> db.Actor.update(
+ {"actor id":101},
+ {
+ $set:
+ {
+ "address":[
+ {"street":"washington street"},
+ {"city":"Washington DC"},
+ {"state":"washington"},
+ {"country":"USA"},
+ {"pincode":"123123"}
+ ]
+ }
+ }
+ )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+>
+----------------------------------------------------------------------------------------------------------------------------
+(10) Update the genre of the film directed by “ Steve Smith”.
+
+> db.Film.update( {"directors":{ "fname":"steve", "lname":"smith" } }, { $set:{ "genre":["action","drama"] } } )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+>
