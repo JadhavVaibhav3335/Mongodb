@@ -1,0 +1,18 @@
+CREATE(p1:Person:Author{name:"John le carre",born:"19-10-1932"})-[s:WROTE]->(b1:Book{titel:["Tinker","Tailor","Soldier","Spy"],published:1974})
+
+CREATE(p2:Person:Reader{name:"Alan"})-[s1:RECOMMENDED{date:"05-07-2011"}]->(b1)
+
+CREATE(p3:Person:Reader:Author{name:"Lan"})-[s2:RECOMMENDED{date:"03-02-2011"}]->(b2:Book{title:"Queens of city",published:1958})
+
+CREATE(p4:Person:Author{name:"Graham Green", born:"02-10-1904",died:"02-04-1901"})-[s4:WROTE]->(b2)
+
+RETURN p1,s,b1,p2,s1,p3,s2,b2,p4,s4
+
+1)
+MATCH(a:Author) where a.born="19-10-1932" return a.name
+
+2)
+CREATE(p7:Person{name:"mr. joshi"}) SET p7.Number_of_book_issued=78 return p7
+
+3)
+MATCH(n{name:"Graham Green"})--(x) RETURN n,count(*)
