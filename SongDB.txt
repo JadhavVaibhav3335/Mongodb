@@ -1,0 +1,14 @@
+CREATE(A1:Artist{name:"Selena Gomez"}),(A2:Artist{name:"Shawn Mendes"}),(A3:Artist{name:"Zayan Malik"}),(A4:Artist{name:"Tayor Swift"}),(S1:Song{name:"Fetish"}),(S2:Song{name:"Stitches"}),(S3:Song{name:"Love Story"}),(S4:Song{name:"I don't wanna live forever"}),(SA1:Song_Author{name:"Alex Schwartz"}),(SA2:Song_Author{name:"Danny Parker"}),(SA3:Song_Author{name:"Tayor Swift"}),(SA4:Song_Author{name:"Dew Sam"}),(RC1:Recording_Company{name:"Republic"}),(RC2:Recording_Company{name:"Island"}),(RC3:Recording_Company{name:"Big Machine"}),(RC4:Recording_Company{name:"Interscope"}),(RS1:Recording_Studio{name:"Phoenix"}),(RS2:Recording_Studio{name:"Blackbird"}),(RS3:Recording_Studio{name:"Rough Customer"}),(RS4:Recording_Studio{name:"Record Plant"}),(A1)-[r1:PERFORMS]->(S1),(A2)-[r2:PERFORMS]->(S2),(A3)-[r3:PERFORMS]->(S3),(A4)-[r4:PERFORMS]->(S4),(A5)-[r5:PERFORMS]->(S4),(S1)-[r6:WRITTEN_BY]->(SA1),(S2)-[r7:WRITTEN_BY]->(SA2),(S3)-[r8:WRITTEN_BY]->(SA3),(S4)-[r9:WRITTEN_BY]->(SA4),(S1)-[r10:RECORDED_IN]->(RS1),(S2)-[r11:RECORDED_IN]->(RS2),(S3)-[r12:RECORDED_IN]->(RS3),(S4)-[r13:RECORDED_IN]->(RS4),(RS1)-[r14:MANAGED_BY]->(RC1),(RS2)-[r15:MANAGED_BY]->(RC2),(RS3)-[r16:MANAGED_BY]->(RC3),(RS4)-[r17:MANAGED_BY]->(RC4),(RC1)-[r18:FINANCES]->(S1),(RC2)-[r19:FINANCES]->(S2),(RC3)-[r20:FINANCES]->(S3),(RC4)-[r21:FINANCES]->(S4)
+
+
+1)
+MATCH(:Artist{name:"Selena Gomez"})--(s:Song) RETURN s
+
+2)
+MATCH(:Song{name:"Stitches"})<-[:FINANCES]-(n) RETURN n
+
+3)
+MATCH(:Song{name:"Love Story"})<-[:PERFORMS]-(n) RETURN n
+
+4)
+MATCH(:Recording_Studio{name:"Record Plant"})<-[:RECORDED_IN]-(n) RETURN n
